@@ -21,4 +21,4 @@ Projede kullanacağım araçlar ve frameworklerin isimleri ;
   - java 1.8 
 
 
-# NOT -> Eksik gördüğünüz veya düzeltmemi istediğiniz konular için Issues oluşturursanız , mevcut projenin daha işlevsel , kullanışlı  olmasında katkınız olur. :) :)
+NOT -> Eksik gördüğünüz veya düzeltmemi istediğiniz konular için Issues oluşturursanız , mevcut projenin daha işlevsel , kullanışlı  olmasında katkınız olur. :) :)
