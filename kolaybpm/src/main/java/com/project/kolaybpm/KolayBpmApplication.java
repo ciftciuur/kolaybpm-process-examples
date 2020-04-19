@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KolaybpmApplication {
+public class KolayBpmApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KolaybpmApplication.class, args);
+		SpringApplication.run(KolayBpmApplication.class, args);
 	}
 
 }
