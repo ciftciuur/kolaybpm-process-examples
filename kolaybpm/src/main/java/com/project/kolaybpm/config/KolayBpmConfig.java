@@ -21,7 +21,7 @@ public class KolayBpmConfig {
         SpringProcessEngineConfiguration config = new SpringProcessEngineConfiguration();
         config.setDataSource(databaseConnection());
         config.setTransactionManager(transactionManager());
-        config.setDatabaseSchemaUpdate("none");
+        config.setDatabaseSchemaUpdate("create");
         config.setHistory("audit");
         config.setAsyncExecutorActivate(true);
         return config;
