@@ -40,9 +40,11 @@ public class KolayBpmConfig {
         return factoryBean;
     }
 
+    //TODO :  database information added application properties , non-static
+    //TODO : database bilgilerini buradan değilde application.properties dosyasından okumalı
     @Bean
     public DataSource databaseConnection() {
-        return DataSourceBuilder.create().url("jdbc:postgresql://localhost:5432/process-db").username("postgres")
+        return DataSourceBuilder.create().url("jdbc:postgresql://localhost:5432/kolaybpm-db").username("postgres")
                 .password("postgres").driverClassName("org.postgresql.Driver").build();
     }
 
