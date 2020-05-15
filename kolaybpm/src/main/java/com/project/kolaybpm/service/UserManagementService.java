@@ -10,4 +10,6 @@ public interface UserManagementService {
     public void saveUser(User user, Group group);
 
     public void deleteUser(String userId);
+
+    public User findById(String userId);
 }

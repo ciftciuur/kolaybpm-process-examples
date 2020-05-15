@@ -4,10 +4,9 @@ import com.project.kolaybpm.service.UserManagementService;
 import org.activiti.engine.identity.Group;
 import org.activiti.engine.identity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -15,9 +14,14 @@ public class UserController {
     @Autowired
     private UserManagementService userManagementService;
 
-    @RequestMapping(value = "/api/activiti/user/save", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/user/save", method = RequestMethod.POST)
     public void saveUser(@RequestBody User user, @RequestBody Group group) {
         userManagementService.saveUser(user, group);
+    }
+
+    @RequestMapping(value = "/api/user/detail", method = RequestMethod.GET)
+    public ResponseEntity<User> findByUserId(@PathVariable String userId) {
+        return new ResponseEntity<User>(userManagementService.findById(userId), HttpStatus.OK);
     }
 
 }

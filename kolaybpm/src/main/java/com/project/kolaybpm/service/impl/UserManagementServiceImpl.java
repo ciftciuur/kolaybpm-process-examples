@@ -34,6 +34,13 @@ public class UserManagementServiceImpl implements UserManagementService {
         identityService.deleteUser(userId);
     }
 
+    @Override
+    public User findById(String userId) {
+        if (userId != null)
+            return identityService.createUserQuery().userId(userId).singleResult();
+        else return null;
+    }
+
 
     private void createMemberShip(String userId, String groupId) {
         identityService.createMembership(userId, groupId);
